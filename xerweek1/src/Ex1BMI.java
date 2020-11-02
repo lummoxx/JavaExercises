@@ -13,6 +13,7 @@ import static java.lang.System.*;
  * - ex1basics
  * - B6Slope in particular.
  */
+
 public class Ex1BMI {
 
     // Don't care about this, must be there, start coding at program
@@ -27,15 +28,16 @@ public class Ex1BMI {
         // Write your code here
         out.println("Please, enter your weight (kg)");
         // --- Input ---------
-        String weight = sc.nextLine();
+        double weight = sc.nextDouble();
 
         out.println("Please, enter your height (m)");
+        double height = sc.nextDouble();
 
         // --- Process --------
-
+        double bmi = weight / Math.pow(height, 2);
 
         // --- Output ---------
-        out.println("BMI = ... " );
+        out.println("BMI = " + bmi);
     }
 
 }

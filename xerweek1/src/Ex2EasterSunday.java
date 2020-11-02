@@ -22,7 +22,7 @@ public class Ex2EasterSunday {
 
     void program() {
 
-        int a, b, c, d, e, s, t;   // Avoid variables on same line (but acceptable here)
+        int a, b, c, d, e, s, t; // Avoid variables on same line (but acceptable here)
         int date;
         int year;
         int month = 0;
@@ -32,7 +32,7 @@ public class Ex2EasterSunday {
         year = sc.nextInt();
 
         // ----- Process -----------
-        a = year % 19;     // Don't need to understand, Gauss did understand
+        a = year % 19; // Don't need to understand, Gauss did understand
         b = year % 4;
         c = year % 7;
         s = 19 * a + 24;
@@ -41,16 +41,32 @@ public class Ex2EasterSunday {
         e = t % 7;
         date = 22 + d + e;
 
-        // TODO Now you continue ...
+        if (date < 32) {
+            if (date == 26) {
+                date = 19;
+                month = 4;
+            } else if ((date == 25) & (a == 16) & (d == 28)) {
+                date = 18;
+                month = 4;
+            } else {
+                month = 3;
+            }
+        } else {
+            date = (d + e - 9);
+            month = 4;
+        }
+
         /*
-            If date is less than 32, then date is found and month is march.
-            Else: Date is set to d + e - 9 and month is april ...
-            ... but with two exceptions
-            If date is 26 easter is on 19 of april.
-            If date is 25 and a = 16 and d = 28 then date is 18 of april.
-         */
 
-
+        out.println("Game over! ");
+        if (total == 0) {
+            out.println("Draw");
+        } else if (total > 0) {
+            out.println("Human won.");
+        } else {
+            out.println("Computer won.");
+        }
+        */
 
         // --------- Output -----------
         out.println("Easter Sunday for  " + year + " is : " + date + "/" + month);

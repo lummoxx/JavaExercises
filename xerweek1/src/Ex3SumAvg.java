@@ -18,16 +18,26 @@ public class Ex3SumAvg {
     final Scanner sc = new Scanner(in);
 
     void program() {
-        // Write your code here
+            // Write your code here
+            out.println("Please input a number greater than 0:");
+            double inputNum = sc.nextDouble();
+            double summed = 0;
+            double count = 0;
 
-        // -- Input (and bookkeeping)
+            while (inputNum > 0) {
+                count++;
+                summed += inputNum;
 
+                inputNum = sc.nextDouble();
+            }
+            double average = summed / count;
 
-        // -- Process---
+            // -- Input (and bookkeeping)
 
+            // -- Process---
 
-        // -- Output ----
-        out.println("Sum = ...");
+            // -- Output ----
+            out.println("Sum = " + summed);
+            out.println("Average = " + average);
+        }
     }
-
-}
