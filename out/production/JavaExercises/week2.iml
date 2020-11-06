@@ -3,12 +3,11 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/xerweek1/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/xerweek2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="JavaFX-13/15" level="application" />
-    <orderEntry type="library" name="lib" level="application" />
+    <orderEntry type="library" name="org.apache.xmlrpc:xmlrpc-server:3.0" level="project" />
+    <orderEntry type="library" name="org.apache.xmlrpc:xmlrpc-client:3.0" level="project" />
   </component>
 </module>
