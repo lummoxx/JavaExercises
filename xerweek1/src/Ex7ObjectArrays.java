@@ -18,17 +18,21 @@ public class Ex7ObjectArrays {
     }
 
     final Scanner sc = new Scanner(in);
-
+    
     void program() {
         // Create (new) and initialize hero objects using the constructor
         Hero[] heroes = {new Hero("Attila", 45), new Hero("Amber", 41),
                 new Hero("Plexus", 52), new Hero("Elektra", 50),
                 new Hero("Furia", 38), new Hero("Tor", 51)};
+        int strongestIndex = 0;
+        
+        for (int i = 1; i < 6; i++) {
+            if (heroes[i].strength > heroes[strongestIndex].strength) {
+                strongestIndex = i;
+            }
+        }
 
-       // TODO
-
-
-       // out.println("Strongest hero is " + heroes[strongestIndex].name);
+       out.println("Strongest hero is " + heroes[strongestIndex].name);
     }
 
     // ------ The class to use  -----------

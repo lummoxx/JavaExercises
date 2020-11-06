@@ -81,7 +81,7 @@ public class Ex8RPS {
             out.println("Result: " + result);
 
             round++;
-        }
+        } // End while
 
         out.println("Game over! ");
         if (total == 0) {

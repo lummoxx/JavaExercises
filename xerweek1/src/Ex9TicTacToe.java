@@ -42,15 +42,33 @@ public class Ex9TicTacToe {
             current = p2;
         }
 
-        // TODO Game loop
+        while (winner == null){
+            int selected = getPlayerSelection(current);
+            while (board[selected] == p1.mark || board[selected] == p2.mark ) {
+                out.println("Position is occupied, try again.");
+                selected = getPlayerSelection(current);
+            }
+            board[selected] = current.mark;
+            if (isWon(board)) {
+                winner = current;
+            }else if (isDraw(board)) {
+                winner.name = "draw";
+            }else if (current == p1) {
+                current = p2;
+            } else {
+                current = p1;
+            }
+            plotBoard(board);
 
+        }
         out.println("Game over!");
         plotBoard(board);
 
-        if (winner != null) {
-            out.println("Winner is " + current.name);
-        } else {
+        if (winner.name == "draw") {
             out.println("Draw");
+
+        } else {
+            out.println("Winner is " + current.name);
         }
     }
 
@@ -64,6 +82,56 @@ public class Ex9TicTacToe {
         }
         return board;
     }
+
+    boolean isOccupied(char[] board, int place) {
+        if (board[place] == 'O' || board[place] == 'X') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    //checks if anyone has three in a row
+    boolean isWon(char[] board) {
+        //diagonally
+        if ((isOccupied(board, 2)) && ((board[2] == board[4]) && (board[2] == board[6]))) {
+            return true;
+        }
+        if ((isOccupied(board, 0)) && ((board[0] == board[4]) && (board[2] == board[8]))) {
+            return true;
+        }
+
+        //horizontally
+        for (int i = 0; i < 9; i++) {
+            if ((isOccupied(board, i)) && (i + 1) % 3 == 0) {
+                if (board[i] == board[i - 1] && board[i] == board[i - 2]) {
+                    return true;
+                }
+            }
+        }
+
+        //vertically
+        for (int i = 0; i<4; i++) {
+            if ((isOccupied(board, i)) && ( (board[i] == board[i + 3]) && (board[i] == board[i + 6]))) {
+                return true;
+            }
+        }
+        return false;
+    }
+    //checks if the game is done but no one won
+    boolean isDraw(char[] board) {
+        for (int i = 0; i < 9; i++){
+            if (!isOccupied(board, i)) {
+                return false;
+            }
+        }
+        if (!isWon(board))
+        {
+            return true;
+        }
+        return false;
+    }
+
 
     // TODO More methods
 
@@ -94,13 +162,17 @@ public class Ex9TicTacToe {
     // A class (blueprint) for players.
     class Player {
         String name;
-        char mark;
+        char mark; // - X O
 
-        Player(String name, char mark) {
+        Player(String name, char mark) { 
             this.name = name;
             this.mark = mark;
         }
     }
+
+    /*
+  
+     */
 
     // This is used to test methods in isolation
     // Any non trivial method should be tested.
@@ -120,3 +192,56 @@ public class Ex9TicTacToe {
         exit(0);
     }
 }
+
+/*
+9. See Ex9TicTacToe. Implement the Tic Tac Toe game.
+   Here you should use functional decomposition and testing.
+
+   If new to programming: Make a plan and discuss with assistant before staring to implement!
+
+   Program should run like:
+
+   Welcome to Tic Tac Toe, board is ...
+   - - -             (<-- empty board)
+   - - -
+   - - -
+   Player is olle(X)
+   Select position to put mark (0-8) > 0
+   X - -
+   - - -
+   - - -
+   Player is fia(O)
+   Select position to put mark (0-8) > 1
+   X O -
+   - - -
+   - - -
+   Player is olle(X)
+   Select position to put mark (0-8) > 2
+   X O X
+   - - -
+   - - -
+   Player is fia(O)
+   Select position to put mark (0-8) > 3
+   X O X
+   O - -
+   - - -
+   Player is olle(X)
+   Select position to put mark (0-8) > 4
+   X O X
+   O X -
+   - - -
+   Player is fia(O)
+   Select position to put mark (0-8) > 5
+   X O X
+   O X O
+   - - -
+   Player is olle(X)
+   Select position to put mark (0-8) > 6
+   Game over!
+   X O X
+   O X O
+   O X 0
+   Winner is olle
+
+
+*/
