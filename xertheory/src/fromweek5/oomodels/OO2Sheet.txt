@@ -1,0 +1,14 @@
+Skapa en OO-modell för ett kalkylprogram typ Excel.
+
+Lösningsförslag i sheet/
+
+1.  Skapa klass för en cell i ett blad. Cell har rad och kolumn.
+    Båda sätts då cellen skapas. Lägg till metod som flyttar cell
+    ett steg till höger. Vi antar att get/setters/equals/hashCode som
+    kan behövas finns (gäller även nedan).
+
+2.  Skapa en klass för ett blad med celler. Ett blad har en lista med
+    celler samt max antal rader och kolumner. Rader och kolumner sätts
+    då bladet skapas. Då bladet skapas skapas även alla celler i bladet.
+
+3.  Lägg till en metod i bladet som flyttar en kolumn med celler ett steg till höger.
