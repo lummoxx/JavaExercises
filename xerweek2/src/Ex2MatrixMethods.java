@@ -1,3 +1,7 @@
+package src;
+
+import static java.util.Arrays.copyOfRange;
+
 import java.util.Arrays;
 
 import static java.lang.StrictMath.round;
@@ -22,8 +26,9 @@ public class Ex2MatrixMethods {
         int[][] m = { // Hard coded test data
                 { -1, 0, -5, 3 }, // twodimensional array, array of 4 elements, each elements
                 { 6, 7, -2, 0 }, { 9, -2, -6, 8 }, { 0, 0, 5, -6 } };
+                
 
-        // test(m);
+
 
         // Uncomment one at a time and implement
 
@@ -45,22 +50,36 @@ public class Ex2MatrixMethods {
         out.println(Arrays.toString(marked[1]).equals("[1, 0, 1]"));
         out.println(Arrays.toString(marked[2]).equals("[0, 1, 0]"));
         int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        int[] arr2 = { 1, 2 , 3 , 4 , 5 , 6 , 7 , 8 };
 
         // Create matrix from array
-
-        // int[][] matrix = toMatrix(arr);
+        int[][] matrix = toMatrix(arr);
+        int[][] matrix2 = toMatrix(arr2);
+        
+        //test(matrix2);
         /*
          * matrix should be { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} }
          */
-        // plot(matrix); // If manual inspection
-        /*
-         * out.println(Arrays.toString(matrix[0]).equals("[1, 2, 3]"));
-         * out.println(Arrays.toString(matrix[1]).equals("[4, 5, 6]"));
-         * out.println(Arrays.toString(matrix[2]).equals("[7, 8, 9]"));
-         */
-        // Sum of all directly surrounding elements to some element in matrix
+        //plot(matrix); 
+        //plot(matrix2);  1(3) 2(5), 3(3), 4(5), 5(8), 6(5), 7(3), 8(5), 9(3)
+        out.println(Arrays.toString(matrix[0]).equals("[1, 2, 3]")); // 0,0  0,1  0,2     
+        out.println(Arrays.toString(matrix[1]).equals("[4, 5, 6]")); // 1,0  1,1  1,2       
+        out.println(Arrays.toString(matrix[2]).equals("[7, 8, 9]")); // 2,0  2,1  2,2       
+        
+        // 0 = första elem i denna array  2 = cap för denna array de kommer att ha 3 grannar
+        // samma elem i mitten-array kommer ha 5 grannar 
+        
+        // 8 och 2 är sista och första arrayens mitten delar, de kommer att ha 5 grannar
+        // alla andra kommer ha 8 grannar ( 5 i det här fallet )
+        // samma elem i slutarray kommer ha 3 grannar
+        // Sum of all directly surrounding elements to some element in matrix           
         // (not counting the element itself)
-        // NOTE: Should be possible to expand method to include more distant neighbours
+       
+
+        // matrix[i][i-1]
+           // NOTE: Should be possible to expand method to include more distant neighbours
+      
+        
         /*
          * out.println(sumNeighbours(matrix, 0, 0) == 11);
          * out.println(sumNeighbours(matrix, 1, 1) == 40);
@@ -106,11 +125,77 @@ public class Ex2MatrixMethods {
         }
         return marked;
     }
+    int[][] toMatrix(int [] arr) {
+        int cap = arr.length;
+        int gcd = 0;
+        for (int i = 1; i < cap; i++) {
+            if (cap % i == 0) {
+                gcd = i;
+            }
+        }
 
-    void test(int[][] m) {
-        out.println("utanför: " + m.length);
-        out.println("inuti: " + m[0].length);
-        out.println(Arrays.toString(getNegatives(m)));
+        int[][] matrix = new int [gcd][cap/gcd];
+        // int[] arr = new int[elements];
+
+        for (int j = 0; j < gcd; j++) {   
+            matrix[j] = copyOfRange(arr, (j*(cap/gcd)), (j*(cap/gcd)) + (cap/gcd));  // [0] = 0->2 [1] = 3->5 [2] = 6->8
+        }
+        return matrix;
+    } 
+    void plot(int[][] matrix) { 
+        for (int row = 0; row < matrix.length; row++) {
+            out.println(Arrays.toString(matrix[row])); 
+        }
+    }
+
+    int sumNeighbours(int[][] matrix, int r, int c) {
+        int sum = 0;
+        int rows = matrix.length;
+        int columns = matrix[0].length;
+        if (r > 0) {
+            sum += matrix[r-1][c];
+        }
+        if (c > 0) {
+            sum += matrix[r][c-1];
+            sum += matrix[r-1][c-1];
+        }
+        if (r < rows) {
+            sum += matrix[r+1][c];
+        }
+        //if (c < columns) {
+        //    sum += matrix[r+1][c];
+        //}
+            return sum;
+        
+     }
+        /*
+[1, 2, 3]")); // 0,0  0,1  0,2     
+[4, 5, 6]")); // 1,0  1,1  1,2       
+[7, 8, 9]")); // 2,0  2,1  2,2 
+
+        if matrix [0][0] = matrix [r] [c];
+        matrix[r-1][c]
+        matrix[r+1][c]
+        matrix[r-1][c-1]
+        matrix[r-1][c+2]
+        
+        
+        //[3, 5 , 5, 3]  arr1  (i + 1) + (i) + (i - 1)    matrix[0][1] + matrix[1][1]
+        //[5, 8 , 8, 5]  arr2   samma index som i i arr2 (i2) i2 +1 och i2-1
+        //[5, 8 , 8, 5]  arr3  
+        //[3, 5 , 5, 3]  if( i+1 <= gcd) matrix [i][j] for i<length sum i + 1
+        
+        
+        
+        */
+   
+
+
+    void test(int[][] matrix) {
+        out.println("utanför: " + matrix.length);
+        
+        out.println("inuti: " + matrix[0].length);
+        //out.println(Arrays.toString(getNegatives(m)));
         exit(0);
     }
 
@@ -119,6 +204,16 @@ public class Ex2MatrixMethods {
 }
 
 /*
+
+
+
+* out.println(sumNeighbours(matrix, 0, 0) == 11);
+* out.println(sumNeighbours(matrix, 1, 1) == 40);
+* out.println(sumNeighbours(matrix, 1, 0) == 23);
+
+
+
+
  * 2. See Ex2MatrixMethods. Implement methods so that program prints true for
  * everything. Use functional decomposition if things getting too complex.
  * 
@@ -126,7 +221,6 @@ public class Ex2MatrixMethods {
  * 
  * 
  * 
- * // Use if you like (during development) void plot(int[][] matrix) { for (int
- * row = 0; row < matrix.length; row++) {
- * out.println(Arrays.toString(matrix[row])); }
+ * // Use if you like (during development)
+
  */

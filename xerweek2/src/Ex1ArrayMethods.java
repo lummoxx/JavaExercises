@@ -1,3 +1,5 @@
+package src;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -33,12 +35,6 @@ public class Ex1ArrayMethods {
         out.println(count(arr, 2) == 4);      // There are four 2's
         out.println(count(arr, 7) == 1);
 
-        // Generate array with 100 elements with 25% distribution of -1's and 1's (remaining will be 0)
-        int[] arr2;
-        arr2 = generateDistribution(100, 0.25, 0.25);
-        out.println(count(arr2, 1) == 25);
-        out.println(count(arr2, -1) == 25);
-        out.println(count(arr2, 0) == 50);
 
         // Generate array with 100 elements with 25% distribution of -1's and 1's
         // (remaining will be 0)
@@ -46,8 +42,8 @@ public class Ex1ArrayMethods {
         out.println(count(arr2, 1) == 25);
         out.println(count(arr2, -1) == 25);
         out.println(count(arr2, 0) == 50);
+
         // Generate array with 14 elements with 40% 1's and 30% -1's
-        int[] arr3;
         arr3 = generateDistribution(14, 0.4, 0.3);
         out.println(count(arr3, 1) == 6);
         out.println(count(arr3, -1) == 4);
@@ -59,11 +55,6 @@ public class Ex1ArrayMethods {
             out.println(Arrays.toString(arr));  // Does it look random?
         }
     }
-    // ---- Write methods below this ------------
-
-    int count(int[] arr, int num) {
-        int occurences = 0;
-        int length = arr.length;
 
     // ---- Write methods below this ------------
     int count(int[] arr, int num) {
