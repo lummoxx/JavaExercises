@@ -44,11 +44,13 @@ public class Ex9TicTacToe {
 
         while (winner == null) {
             int selected = getPlayerSelection(current);
-            while (board[selected] == p1.mark || board[selected] == p2.mark) {
+            while (isOccupied(board, selected)) {
                 out.println("Position is occupied, try again.");
                 selected = getPlayerSelection(current);
             }
-            board[selected] = current.mark;
+            setMark(board, selected, current); //board[selected] = current.mark;
+            plotBoard(board); 
+        
             if (isWon(board)) {
                 winner = current;
             } else if (isDraw(board)) {
@@ -58,17 +60,15 @@ public class Ex9TicTacToe {
             } else {
                 current = p1;
             }
-            plotBoard(board);
         } //end while
 
         out.println("Game over!");
         plotBoard(board);
 
-        if (isDraw(board)) {
-            out.println("Draw");
-
+        if (winner != null)) {
+            out.println("Winner is " + winner.name);
         } else {
-            out.println("Winner is " + current.name);
+            out.println("Draw");
         }
     }
 
@@ -82,34 +82,36 @@ public class Ex9TicTacToe {
         return board;
     }
 
+    void setMark(char[] board, int selected, Player current) {
+        board[selected] = current.mark;
+    }
+
     boolean isOccupied(char[] board, int place) {
-        if (board[place] == 'O' || board[place] == 'X') {
-            return true;
-        } else {
-            return false;
-        }
+        return (board[place] == EMPTY); 
     }
 
     // checks if anyone has three in a row
     boolean isWon(char[] board) {
-        // diagonally
-        if ((isOccupied(board, 2)) && ((board[2] == board[4]) && (board[2] == board[6]))) {
-            return true;
-        }
-        if ((isOccupied(board, 0)) && ((board[0] == board[4]) && (board[0] == board[8]))) {
-            return true;
-        }
+        return hasDiagonal(board) || hasHorizontal(board) || hasVertical(board);
+    }
 
-        // horizontally
-        for (int i = 0; i < 9; i++) {
-            if ((isOccupied(board, i)) && (i + 1) % 3 == 0) {
+    boolean hasDiagonal(board) {
+        return ((isOccupied(board, 2)) && ((board[2] == board[4]) && (board[2] == board[6]))) 
+            ||  ((isOccupied(board, 0)) && ((board[0] == board[4]) && (board[0] == board[8])));
+    }
+    
+    boolean hasHorizontal(board) {
+        for (int i = 2; i < 9; i+3) {
+            if (isOccupied(board, i)) {
                 if (board[i] == board[i - 1] && board[i] == board[i - 2]) {
                     return true;
                 }
             }
         }
+        return false;
+    }
 
-        // vertically
+    boolean hasVertical(board) {
         for (int i = 0; i < 4; i++) {
             if ((isOccupied(board, i)) && ((board[i] == board[i + 3]) && (board[i] == board[i + 6]))) {
                 return true;
@@ -117,6 +119,7 @@ public class Ex9TicTacToe {
         }
         return false;
     }
+
 
     // checks if the game is done but no one won
     boolean isDraw(char[] board) {
