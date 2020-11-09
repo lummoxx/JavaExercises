@@ -23,8 +23,10 @@ public class Ex1ArrayMethods {
     final static Random rand = new Random();
 
     void program() {
-        int[] arr = {1, 2, 2, 5, 3, 2, 4, 2, 7};  // Hard coded test data
-
+        // test();
+        int[] arr = { 1, 2, 2, 5, 3, 2, 4, 2, 7 }; // Hard coded test data
+        int[] arr2 = new int[0];
+        int[] arr3 = new int[0];
         // Uncomment one at a time and implement
 
         // Count occurrences of some element in arr
@@ -38,6 +40,12 @@ public class Ex1ArrayMethods {
         out.println(count(arr2, -1) == 25);
         out.println(count(arr2, 0) == 50);
 
+        // Generate array with 100 elements with 25% distribution of -1's and 1's
+        // (remaining will be 0)
+        arr2 = generateDistribution(100, 0.25, 0.25);
+        out.println(count(arr2, 1) == 25);
+        out.println(count(arr2, -1) == 25);
+        out.println(count(arr2, 0) == 50);
         // Generate array with 14 elements with 40% 1's and 30% -1's
         int[] arr3;
         arr3 = generateDistribution(14, 0.4, 0.3);
@@ -51,7 +59,11 @@ public class Ex1ArrayMethods {
             out.println(Arrays.toString(arr));  // Does it look random?
         }
     }
+    // ---- Write methods below this ------------
 
+    int count(int[] arr, int num) {
+        int occurences = 0;
+        int length = arr.length;
 
     // ---- Write methods below this ------------
     int count(int[] arr, int num) {
@@ -94,3 +106,32 @@ public class Ex1ArrayMethods {
         return arr;
     }
 }
+/*
+ * See Ex2ArrayMethod. Implement methods. In general program should just print
+ * "true". The only exception is the shuffle method. Method uses Random, so hard
+ * to test. Print out for shuffle should look something like:
+ *
+ * [0, 0, 1, 0, -1, -1, 1, 0, 1, 1, 1, 1, -1, -1] (randomly ordered elements)
+ * [-1, 1, 1, 0, 0, 1, -1, 1, 1, 0, 1, -1, 0, -1] [-1, 1, 1, 0, 1, 0, -1, 0, 1,
+ * 1, -1, 1, 0, -1] [-1, -1, 0, 0, -1, -1, 1, 1, 0, 1, 1, 1, 1, 0] [0, 0, 1, -1,
+ * -1, 0, -1, -1, 1, 1, 1, 1, 1, 0] [1, -1, 0, 0, 1, -1, 1, 1, 0, 1, -1, 0, 1,
+ * -1] [1, 1, 1, -1, 0, 1, 0, 0, 1, -1, -1, 0, 1, -1] [-1, 1, 1, 0, -1, 0, -1,
+ * 1, 1, 1, 0, 1, 0, -1] [1, 1, -1, -1, -1, 1, 0, 1, -1, 0, 1, 0, 0, 1] [0, 1,
+ * 0, 1, 0, 0, 1, 1, -1, -1, 1, 1, -1, -1] ...
+ *
+ * See code for comments.
+ * 
+ * 
+ * [0, 1, 0, 1, 1, 1, 1, -1, -1, -1, 0, -1, 1, 0] [0, 1, 1, 1, 1, 0, 0, -1, 1,
+ * 1, -1, 0, -1, -1] [1, 1, 0, -1, 1, -1, -1, 1, 1, 0, -1, 0, 1, 0] [1, 0, -1,
+ * 1, -1, 0, 0, 1, -1, -1, 1, 0, 1, 1] [1, -1, -1, 0, -1, 1, 0, 1, 0, -1, 1, 0,
+ * 1, 1] [0, 1, -1, 0, 1, -1, 0, 0, -1, 1, 1, -1, 1, 1] [1, -1, 0, 1, 1, 1, -1,
+ * 1, 1, -1, 0, 0, 0, -1] [-1, 1, 0, -1, 1, 0, -1, 1, 0, -1, 1, 1, 1, 0] [-1,
+ * -1, 1, 1, 1, 1, 0, 1, -1, 0, 0, 0, 1, -1] [-1, 1, 0, 1, -1, 1, 0, 1, 1, 0, 1,
+ * -1, -1, 0]
+ * 
+ * Process finished with exit code 0
+ * 
+ * 
+ * 
+ */
