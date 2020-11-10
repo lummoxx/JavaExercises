@@ -1,4 +1,7 @@
+package src;
+
 import static java.lang.System.*;
+
 /*
  *  For each of the section below. Uncomment and explain
  *
@@ -9,13 +12,12 @@ public class Ex3Theory {
         new Ex3Theory().program();
     }
 
-
     void program() {
 
         // 1. -------------------------------------------
 
         // Uncomment and run. Which value is correct for the volume of a sphere?
-        /*
+
         int r = 10;
         double pi = 3.141;
         double vol1 = 4 * pi / 3 * r * r * r;
@@ -27,14 +29,15 @@ public class Ex3Theory {
         out.println(vol2);
         out.println(vol3);
         out.println(vol4);
-        */
 
         // 2. ---------------------------------------------------
 
         // Uncomment section below and you will get compile errors. Why?
-        /*
+
         {
             int x = 0;
+        }
+        {
             {
                 int x = 0;
                 int y = 0;
@@ -46,9 +49,6 @@ public class Ex3Theory {
             out.println(x);
             out.println(y);
         }
-        out.println(x);
-        out.println(y);
-        */
 
         // 3. ----------------------------------------------------------
 
@@ -56,26 +56,33 @@ public class Ex3Theory {
 
         double d1 = 1.0;
         double d2 = 1.0;
-        d1 = d1 - 0.7 - 0.3;
-        d2 = d2 - 0.6 - 0.4;
-        out.println(d1 == 0);
-        out.println(d2 == 0);
-        out.println(d1 == d2);
+        double d3 = 1.0;
+        d1 = d1 - 0.3 - 0.7; // d1 -0.7 -0.3 =/ 0
+        d3 = d3 - 0.7 - 0.3;
+        d2 = d2 - 0.6 - 0.4; // d2 -0.6- 0.4 = 0 (1.0 / 5)*3 = 0.6
+        out.println(d1 + " " + d3);
+        out.println(d1 == 0); // false
+        out.println(d2 == 0); // true
+        out.println(d1 == d2); // false
 
         // 4. -----------------------------------------------------
 
         // Uncomment and run. Explain output!
+
+        out.println(1 + 2); // 3
+        out.println("2 + 1"); // 2 + 1
+        out.println(1 + 2.0 + "a"); // 3.0a
+        out.println("a" + 1 + 2); // a12
+        out.println('a' + 1 + 2); // 97 + 1 + 2 = 100
+        out.println('a' + "a" + 'a' + 1 + 't'); // aa
+
         /*
-        out.println(1 + 2);
-        out.println("2 + 1");
-        out.println(1 + 2.0 + "a");
-        out.println("a" + 1 + 2);
-        out.println('a' + 1 + 2);
-        out.println("a" + 'a');
-        */
 
         // 5. ---------------------------------
         // Why is there no return type for a constructor?
 
-        }
+
+    }
 }
+
+*/

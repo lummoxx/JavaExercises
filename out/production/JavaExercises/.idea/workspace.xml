@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="091bdc8b-6a80-4a24-bd58-4557c625477d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/JavaExercises.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/JavaExercises.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/xerweek2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/xerweek2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1ArrayMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1ArrayMethods.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +28,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.Ex1ArrayMethods">
+  <component name="RunManager" selected="Application.Ex4GameOfLife">
     <configuration name="Ex1ArrayMethods" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ex1ArrayMethods" />
       <module name="xerweek2" />
@@ -45,21 +43,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Ex1ArrayMethods" />
         <item itemvalue="Application.Ex4GameOfLife" />
+        <item itemvalue="Application.Ex1ArrayMethods" />
       </list>
     </recent_temporary>
   </component>
@@ -75,6 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600853756401</updated>
       <workItem from="1604672062916" duration="5950000" />
+      <workItem from="1605004450916" duration="91000" />
     </task>
     <servers />
   </component>
@@ -110,11 +111,12 @@
     </state>
     <state width="1127" height="177" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1604674087739" />
     <state width="1127" height="177" key="GridCell.Tab.0.right/0.23.1280.724@0.23.1280.724" timestamp="1604858117491" />
-    <state x="172" y="122" width="863" height="580" key="SettingsEditor" timestamp="1604672469408">
-      <screen x="0" y="23" width="1280" height="723" />
+    <state x="313" y="122" width="863" height="580" key="SettingsEditor" timestamp="1605004540111">
+      <screen x="0" y="23" width="1280" height="726" />
     </state>
     <state x="389" y="131" width="1026" height="841" key="SettingsEditor/0.0.1680.1050/1680.0.1280.1024@0.0.1680.1050" timestamp="1600853805075" />
     <state x="172" y="122" width="863" height="580" key="SettingsEditor/0.23.1280.723@0.23.1280.723" timestamp="1604672469408" />
+    <state x="313" y="122" key="SettingsEditor/0.23.1280.726@0.23.1280.726" timestamp="1605004540111" />
     <state x="280" y="70" width="670" height="676" key="search.everywhere.popup" timestamp="1604672378311">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
