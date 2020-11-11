@@ -15,7 +15,6 @@ public class HelloWorld extends Application {
 
         Button button = new Button();
 
-
         StackPane root = new StackPane();
         Scene scene = new Scene(root, 300, 250);
 
@@ -27,6 +26,7 @@ public class HelloWorld extends Application {
         System.out.println("hej 3");
 
     }
+
     public static void main(String[] args) {
         launch(args);
     }

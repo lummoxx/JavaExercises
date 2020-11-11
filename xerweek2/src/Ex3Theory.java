@@ -1,5 +1,3 @@
-package src;
-
 import static java.lang.System.*;
 
 /*
@@ -76,7 +74,7 @@ public class Ex3Theory {
         out.println('a' + 1 + 2); // 97 + 1 + 2 = 100
         out.println('a' + "a" + 'a' + 1 + 't'); // aa
 
-        /*
+
 
         // 5. ---------------------------------
         // Why is there no return type for a constructor?
@@ -85,4 +83,3 @@ public class Ex3Theory {
     }
 }
 
-*/

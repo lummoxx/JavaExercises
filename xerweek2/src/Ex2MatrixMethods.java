@@ -1,5 +1,3 @@
-package src;
-
 import static java.util.Arrays.copyOfRange;
 
 import java.util.Arrays;

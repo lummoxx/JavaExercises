@@ -7,3 +7,8 @@
 .idea/JavaExercises.iml
 *.class
 *.xml
+JavaExercises.iml
+.vscode/settings.json
+.vscode/launch.json
+out/.idea/xerweek2.iml
+out/lectweek2.iml

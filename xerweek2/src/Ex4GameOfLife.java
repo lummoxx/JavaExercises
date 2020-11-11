@@ -28,53 +28,6 @@ import static java.lang.System.out;
  * See:
  * - UseEnum
  * - BasicJavaFX (don't need to understand, just if you're curious)
- 
-public class Test 
-{ 
-    Day day; 
-  
-    // Constructor 
-    public Test(Day day) 
-    { 
-        this.day = day; 
-    } 
-  
-    // Prints a line about Day using switch 
-    public void dayIsLike() 
-    { 
-        switch (day) 
-        { 
-        case MONDAY: 
-            System.out.println("Mondays are bad."); 
-            break; 
-        case FRIDAY: 
-            System.out.println("Fridays are better."); 
-            break; 
-        case SATURDAY: 
-        case SUNDAY: 
-            System.out.println("Weekends are best."); 
-            break; 
-        default: 
-            System.out.println("Midweek days are so-so."); 
-            break; 
-        } 
-    } 
-  
-    // Driver method 
-    public static void main(String[] args) 
-    { 
-        String str = "MONDAY"; 
-        Test t1 = new Test(Day.valueOf(str)); 
-        t1.dayIsLike(); 
-    } 
-} 
- 
- 
- 
- 
- 
- 
- 
  */
 public class Ex4GameOfLife extends Application {
 
@@ -219,3 +172,28 @@ public class Ex4GameOfLife extends Application {
         launch(args);   // Launch JavaFX
     }
 }
+
+/*
+4.  Ex4GameOfLife. Implement a simulation of "Game of Life", see
+    https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+    and https://bitstorm.org/gameoflife/
+
+    This is s graphical program, all graphics already implemented using JavaFX,
+    you don't need to do (or understand) any graphics coding (but is simple and fun ...).
+
+    NOTE: If any problems with graphics. Go to Canvas > course page > Resurser >
+    Java, JavaFX och IntelliJ. See section Koppla ihop JavaFX och IntelliJ.
+
+    a) Implement the init() method. The method should create and initialize the world with Cells
+       (a square matrix with Cells). See code.
+
+       - Sketch a plan and discuss with assistant before implementing!
+
+    b) Now implement the update() method. The method should calculate the next state for all
+       Cells in the world (using the rules).
+       Method called automatically by a timer, don't need to call it. Rendering will be done automatically
+
+       - If new: Make a plan! Discuss with assistants
+       - Extensive use of testing! See comments and test() method.
+
+*/
