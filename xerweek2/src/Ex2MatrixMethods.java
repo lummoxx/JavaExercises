@@ -20,7 +20,7 @@ public class Ex2MatrixMethods {
     }
 
     void program() {
-
+       //  final static Random rand = new Random();
         int[][] m = { // Hard coded test data
                 { -1, 0, -5, 3 }, // twodimensional array, array of 4 elements, each elements
                 { 6, 7, -2, 0 }, { 9, -2, -6, 8 }, { 0, 0, 5, -6 } };

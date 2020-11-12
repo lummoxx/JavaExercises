@@ -1,1 +1,5 @@
 utility methods?? vad är det, vilka metoder ska vi sortera under den här rubriken
+
+får vi lägga new random utanför metoderna?
+
+måste shuffle göras på en 2D-matris, eller kan vi som vi gjort shuffla en array?
