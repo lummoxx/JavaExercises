@@ -46,8 +46,37 @@ public class Neighbours extends Application {
     // (i.e move unsatisfied) approx each 1/60 sec.
     
     void updateWorld() {
-        // % of surrounding neighbours that are like me
-        //double threshold = 0.7;
+        int nLocations = world.length * world.length;
+        int dim = world.length;
+        int[][] nulls = new int[nLocations][2]; // index koordinater
+        int[][] unsatisfied = new int[nLocations][2]; // index koordinater
+        int numNulls = 0;
+        int numUnsatis = 0;
+        double th = 0.7; // % of surrounding neighbours that are like me
+
+        for(int i = 0; i < dim; i++){
+            for(int j = 0; j < dim; j++){
+                if(world[i][j]==null){
+                    nulls[numNulls][0] = i;
+                    nulls[numNulls][1] = j;
+                    numNulls++;
+                } else if (!(isSatisfied((findNeighbours(world, i, j)), world[i][j], th))){
+                    nulls[numNulls][0] = i;
+                    nulls[numNulls][1] = j;
+                    numNulls++;
+                    unsatisfied[numUnsatis][0] = i;
+                    unsatisfied[numUnsatis][1] = j;
+                    numUnsatis++;
+                }
+            }
+        }
+
+        nulls = shuffleIndices(nulls);  // tomma platser ++ platser med onöjda
+        
+        for (int i = 0; i < nLocations; i++) {
+           // ...to be continued
+        }
+
     }
     // This method initializes the world variable with a random distribution of Actors
     // Method automatically called by JavaFX runtime
@@ -55,7 +84,7 @@ public class Neighbours extends Application {
     
     @Override
     public void init() {
-        test();    // <---------------- Uncomment to TEST, see below!
+        //test();    // <---------------- Uncomment to TEST, see below!
         //Intitializations
         double[] dist = {0.25, 0.25, 0.50}; // %-distribution of RED, BLUE and NONE
         int nLocations = 900; // Number of locations (places) in world (must be a square)
@@ -91,9 +120,9 @@ public class Neighbours extends Application {
     }
     
     Actor[] findNeighbours (Actor [][] w, int r, int c){
-        int[] rowIndices = {r, r-1, r+1};   // r, c   r, c-1,  r,c+1
-        int[] colIndices = {c, c-1, c+1};   // r-1, c  r-1,c-1  r-1,c+1
-        Actor[] neighbours = new Actor[8];  // r +1,c r+1, c-1, r-1,c+1
+        int[] rowIndices = {r, r-1, r+1};   
+        int[] colIndices = {c, c-1, c+1};   
+        Actor[] neighbours = new Actor[8]; 
         int sumfoundNeigh = 0;
 
         for (int i = 0; i <= 2; i++) {
@@ -118,31 +147,6 @@ public class Neighbours extends Application {
         out.println("antalet grannar: " + neighbours2.length);
         return neighbours2;
     }
-        /*
-rätt:
-0,0 = 2
-0,1 = 2 x
-0,2 = 2           
-1,0 = 4 x
-1,1 = 4
-1,2 = 3  
-2,0 = 1         
-2,1 = 3 
-2,2 = 1
-
-fel:
-0,0 = 4
-0,1 = 6
-0,2 = 4
-1,0 = 4
-1,1 = exception 8 out of bounds
-1.2 = 6
-2.0 = 4
-2.1 = 6
-2.2 =4
-
-
-        */
 
     // ----------- Property checking methods -----------------
     
@@ -160,7 +164,7 @@ fel:
         out.println("antalet samma färg: " + sumFriends); 
         out.println("procent:");
         if (neighbours.length !=0){
-            int x = (sumFriends)*100 /(neighbours.length);   //300 / 4
+            int x = (sumFriends)*100 /(neighbours.length);   
             out.println(x);
             return ((x) >=  bigDouble);
         } else {
@@ -248,6 +252,15 @@ fel:
         return locations;
     }
     
+    int[][] shuffleIndices(int[][] nulls){
+        for (int i = 0; i < nulls.length; i++) {
+            int randomIndexToSwap = rand.nextInt(nulls.length);
+            int[] temp = nulls[randomIndexToSwap];
+            nulls[randomIndexToSwap] = nulls[i];
+            nulls[i] = temp;
+        }
+        return nulls;
+    }
 
     // ------- Testing -------------------------------------
     
@@ -272,27 +285,8 @@ fel:
                 {null,                 new Actor(Color.BLUE),                  null},
                 {new Actor(Color.RED),          null,         new Actor(Color.BLUE)}
         };
-        /* 
-0,0 = 4, ska va 2
-0,1 = 6, ska va 2
-0, 2 = 4, ska va 2
 
-1, 0 = 4, ska va 4 !!
-1, 1 = exception, ska vara 4
-1, 2 = 6 ska va 3
-
-2, 0 = 4, 
-2, 1 = 6,
-2,2 = 4
-
-(2,0) = 1
-(0,2) = 2
-(1,2) = 3
-(2,1) = 3
-(2, 2) = 1
-        */
-        out.println((findNeighbours(testWorld, 0, 0)));
-
+        //out.println((findNeighbours(testWorld, 0, 0)));
         //out.println(findNeighbours(testWorld, 1, 0));
 
         //out.println(findNeighbours(testWorld, 2, 1));
@@ -313,7 +307,7 @@ fel:
         */
         
 
-        //out.println(isSatisfied((findNeighbours(testWorld, 2, 0)), testWorld[2][0], th));
+        out.println(isSatisfied((findNeighbours(testWorld, 2, 0)), testWorld[2][0], th));
       // Simple threshold used for testing
         //out.println(prop_distribute(dist,(distribute(dist, nLocations))));
         //out.println(prop_matrix(dist,toWorld((distribute(dist, nLocations)))));
