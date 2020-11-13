@@ -91,9 +91,9 @@ public class Neighbours extends Application {
     }
     
     Actor[] findNeighbours (Actor [][] w, int r, int c){
-        int[] rowIndices = {r, r-1, r+1};   // r, r
-        int[] colIndices = {c, c-1, c+1}; 
-        Actor[] neighbours = new Actor[8];
+        int[] rowIndices = {r, r-1, r+1};   // r, c   r, c-1,  r,c+1
+        int[] colIndices = {c, c-1, c+1};   // r-1, c  r-1,c-1  r-1,c+1
+        Actor[] neighbours = new Actor[8];  // r +1,c r+1, c-1, r-1,c+1
         int sumfoundNeigh = 0;
 
         for (int i = 0; i <= 2; i++) {
