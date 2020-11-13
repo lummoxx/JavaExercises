@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="02744097-95e1-49a4-9a89-5401abdf6631" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/ex3supersub/SS8Sizes.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="1V6DbFYmjqbDYhEyEND4K58gImf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ex4javafx" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ex2methods" />
+      <recent name="ex4javafx" />
+      <recent name="ex3supersub" />
+      <recent name="ex1enumwrapper" />
+      <recent name="ex1problems" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ex4javafx" />
+      <recent name="$PROJECT_DIR$/src/ex3types" />
+      <recent name="$PROJECT_DIR$/src/ex2types" />
+      <recent name="$PROJECT_DIR$/src/ex1methods" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.FX2Bounce">
+    <configuration name="FX1Animation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex4javafx.FX1Animation" />
+      <module name="lectweek3" />
+      <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/devel/java/javafx-sdk-13.0.1/lib --add-modules javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex4javafx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FX2Bounce" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex4javafx.FX2Bounce" />
+      <module name="lectweek3" />
+      <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/devel/java/javafx-sdk-13.0.1/lib --add-modules javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex4javafx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FX3Collisions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex4javafx.FX3Collisions" />
+      <module name="lectweek3" />
+      <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/devel/java/javafx-sdk-13.0.1/lib --add-modules javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex4javafx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="M5SideEffect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex2methods.M5SideEffect" />
+      <module name="lectweek3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex2methods.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="M6Recursion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex2methods.M6Recursion" />
+      <module name="lectweek3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex2methods.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.FX1Animation" />
+      <item itemvalue="Application.M5SideEffect" />
+      <item itemvalue="Application.M6Recursion" />
+      <item itemvalue="Application.FX2Bounce" />
+      <item itemvalue="Application.FX3Collisions" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FX2Bounce" />
+        <item itemvalue="Application.FX3Collisions" />
+        <item itemvalue="Application.FX1Animation" />
+        <item itemvalue="Application.M6Recursion" />
+        <item itemvalue="Application.M5SideEffect" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02744097-95e1-49a4-9a89-5401abdf6631" name="Default Changelist" comment="" />
+      <created>1576564720663</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576564720663</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1771" y="294" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600844632901">
+      <screen x="1680" y="0" width="1280" height="1024" />
+    </state>
+    <state x="1771" y="294" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050/1680.0.1280.1024@1680.0.1280.1024" timestamp="1600844632901" />
+    <state x="449" y="278" width="426" height="480" key="FileChooserDialogImpl" timestamp="1600694171652">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="449" y="278" width="426" height="480" key="FileChooserDialogImpl/0.0.1680.1050/1680.0.1280.1024@0.0.1680.1050" timestamp="1600694171652" />
+    <state width="1115" height="205" key="GridCell.Tab.0.bottom" timestamp="1600844669321">
+      <screen x="1680" y="0" width="1280" height="1024" />
+    </state>
+    <state width="1115" height="205" key="GridCell.Tab.0.bottom/0.0.1680.1050/1680.0.1280.1024@1680.0.1280.1024" timestamp="1600844669321" />
+    <state width="1115" height="205" key="GridCell.Tab.0.center" timestamp="1600844669321">
+      <screen x="1680" y="0" width="1280" height="1024" />
+    </state>
+    <state width="1115" height="205" key="GridCell.Tab.0.center/0.0.1680.1050/1680.0.1280.1024@1680.0.1280.1024" timestamp="1600844669321" />
+    <state width="1115" height="205" key="GridCell.Tab.0.left" timestamp="1600844669321">
+      <screen x="1680" y="0" width="1280" height="1024" />
+    </state>
+    <state width="1115" height="205" key="GridCell.Tab.0.left/0.0.1680.1050/1680.0.1280.1024@1680.0.1280.1024" timestamp="1600844669321" />
+    <state width="1115" height="205" key="GridCell.Tab.0.right" timestamp="1600844669321">
+      <screen x="1680" y="0" width="1280" height="1024" />
+    </state>
+    <state width="1115" height="205" key="GridCell.Tab.0.right/0.0.1680.1050/1680.0.1280.1024@1680.0.1280.1024" timestamp="1600844669321" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/ex2methods/M6Recursion.java</url>
+          <line>25</line>
+          <properties class="ex2methods.M6Recursion" method="doItRec">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

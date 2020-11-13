@@ -3,13 +3,6 @@
 .idea/modules.xml
 .idea/vcs.xml
 .idea/JavaExercises.iml
-*.xml
-.idea/JavaExercises.iml
-*.class
-*.xml
-JavaExercises.iml
 .vscode/settings.json
 .vscode/launch.json
-out/.idea/xerweek2.iml
-out/lectweek2.iml
 .idea/JavaExercises.iml
