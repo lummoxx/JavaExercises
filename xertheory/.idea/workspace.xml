@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36d4ada3-b5f5-44a3-8a4c-e8ba47cd10d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/JavaExercises.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lectweek2/lectweek2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/xertheory.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xertheory1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xerweek1/xerweek1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xerweek2/xerweek2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaExercises.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lectweek3/lectweek3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../lectweek3/lectweek3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lect/lectweek2/src/ex1compiler/C1Names.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lect/lectweek2/src/ex1compiler/C1Names.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lect/lectweek2/src/ex3methods/MR2ReturnValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lect/lectweek2/src/ex3methods/MR2ReturnValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lect/lectweek3/src/ex1enumwrapper/EW3WrapperTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lect/lectweek3/src/ex1enumwrapper/EW3WrapperTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lect/lectweek3/src/ex2methods/M1Overloading.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lect/lectweek3/src/ex2methods/M2Overloading.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lect/lectweek3/src/ex2methods/M2GenericMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lect/lectweek3/src/ex2methods/M3GenericMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lect/lectweek3/src/ex2methods/M2GenericSearchSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lect/lectweek3/src/ex2methods/M4GenericSearchSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lect/lectweek3/src/ex2methods/M4SideEffect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lect/lectweek3/src/ex2methods/M5Recursion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lect/lectweek3/src/ex2methods/M6Recursion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lect/lectweek3/src/ex3supersub/SS1Values.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lect/lectweek3/src/ex3supersub/SS1Values.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lect/lectweek3/src/ex4javafx/FX1Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lect/lectweek3/src/ex4javafx/FX1Animation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fromweek3/references/R1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fromweek4/references/R1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fromweek3/types/T1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../xertheory/src/fromweek3/references/R1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../xertheory/src/fromweek4/references/R1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../xertheory/src/fromweek3/types/T1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../xertheory/src/fromweek3/types/T1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../old/oo2/hw2.src" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../old/oo2/hw2.src" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +24,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="ProjectId" id="1X9jMSXnLzkv2NGAKf20Xvkxbje" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -27,17 +32,15 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/fromweek3/types" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -47,7 +50,18 @@
       <recent name="$PROJECT_DIR$/src/fromweek4" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -58,17 +72,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580465155825</updated>
-      <workItem from="1605443354899" duration="30000" />
     </task>
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="119" y="23" key="SettingsEditor" timestamp="1605443374164">
-      <screen x="0" y="23" width="1280" height="727" />
+    <state x="432" y="399" width="423" height="233" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1580466752161">
+      <screen x="0" y="0" width="1248" height="1024" />
     </state>
-    <state x="119" y="23" key="SettingsEditor/0.23.1280.727@0.23.1280.727" timestamp="1605443374164" />
+    <state x="432" y="399" width="423" height="233" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1248.1024@0.0.1248.1024" timestamp="1580466752161" />
+    <state x="301" y="220" width="668" height="576" key="FileChooserDialogImpl" timestamp="1580466725186">
+      <screen x="0" y="0" width="1248" height="1024" />
+    </state>
+    <state x="301" y="220" width="668" height="576" key="FileChooserDialogImpl/0.0.1248.1024@0.0.1248.1024" timestamp="1580466725186" />
+    <state x="126" y="90" width="1026" height="841" key="SettingsEditor" timestamp="1580466733203">
+      <screen x="0" y="0" width="1248" height="1024" />
+    </state>
+    <state x="126" y="90" width="1026" height="841" key="SettingsEditor/0.0.1248.1024@0.0.1248.1024" timestamp="1580466733203" />
   </component>
 </project>
