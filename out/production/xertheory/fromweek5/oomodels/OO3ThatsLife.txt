@@ -1,0 +1,28 @@
+Implementera en OO-modell för spelet That's life.
+
+Se https://www.ravensburger.com/spielanleitungen/ecm/Spielanleitungen/Thats_Life_GB.pdf
+
+Klasserna skall vara så icke-muterbara som möjligt och dölja så mycket som möjligt
+av sin data (information hiding).
+
+1.  Skriv en klass Tile för brickor. En bricka har ett visst antal poäng.
+    Poäng anges då man skapar brickan. Vi antar att get/setters/equals/hashCode
+    som kan behövas finns (gäller även nedan).
+
+2.  Skriv en klass Player för en spelare. En spelare har ett namn och en
+    lista med brickor (spelaren kan samla på brickor). Det skall finnas en
+    metod som lägger till en bricka i spelarens lista. Namn anges då man
+    skapar en spelare.
+
+3.  Skriv en klass Piece som skall representera en spelpjäs. En Piece har
+    en färg, en spelare som äger den och en position, d.v.s. den Tile den står på.
+    Alla data skall anges då pjäsen skapas.
+
+4.  Skriv en klass Game för hela spelet. Game har en spelplan i form av en
+    lista med Tiles, en lista med Piece för pjäserna samt en aktuell pjäs
+    (den som skall flyttas). All data sätts då ett Game-objekt skapas.
+    Lägg till en metod move(int diceResult) i Game. Metoden flyttar aktuell pjäs
+    enligt parametern diceResult. Om det efter förflyttningen är tomt på
+    brickan där pjäsen stod skall metoden ta bort brickan från spelplanen och
+    tilldela denna till spelaren som äger pjäsen (spelplanen krymper)
+
