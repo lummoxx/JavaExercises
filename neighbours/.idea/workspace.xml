@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:claras" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7ed2bea5-1e18-426c-9250-8efa1ff63667" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../../common/lect/lectweek5/src/ex1classes/ex1classes.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../common/lect/lectweek5/src/ex1classes/ex1classes.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../common/xer/xerweek1/exercises1" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../common/xer/xerweek1/exercises1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../common/xer/xerweek1/src/Ex4Arrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../common/xer/xerweek1/src/Ex4Arrays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../common/xer/xerweek1/src/Ex8RPS.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../common/xer/xerweek1/src/Ex8RPS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../common/xer/xerweek2/src/exercises2" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../common/xer/xerweek2/src/exercises2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../common/xer/xerweek3/src/exercises3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../common/xer/xerweek3/src/exercises3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../common/xer/xerweek4/src/exercises4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../common/xer/xerweek4/src/exercises4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../common/xer/xerweek5/src/exercises5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../common/xer/xerweek5/src/exercises5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../common/xer/xerweek6/src/exercises6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../common/xer/xerweek6/src/exercises6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,18 +38,19 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1hr5YQ82wbl7qqjjwQhMmfxu3Lu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../calculator" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -57,24 +75,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Neighbours" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -85,8 +105,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572512943035</updated>
+      <workItem from="1605261619628" duration="19000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="331" y="233" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600757031044">

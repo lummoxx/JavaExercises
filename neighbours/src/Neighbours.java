@@ -183,6 +183,7 @@ public class Neighbours extends Application {
         } 
         return neighbours2;
     }
+<<<<<<< Updated upstream
 
     int[][] findNeighboursCoordinates (Actor [][] w, int r, int c){
         int[] rowIndices = {r, r-1, r+1};   
@@ -208,6 +209,32 @@ public class Neighbours extends Application {
         } 
         return neighbours2;
     }
+=======
+        /*
+rätt:
+0,0 = 2
+0,1 = 2 x
+0,2 = 2           
+1,0 = 4 x
+1,1 = 4
+1,2 = 3  
+2,0 = 1         
+2,1 = 3 
+2,2 = 1
+
+fel:
+0,0 = 4
+0,1 = 6
+0,2 = 4
+1,0 = 4
+1,1 = exception 8 out of bounds
+1.2 = 6
+2.0 = 4
+2.1 = 6
+2.2 =4
+
+        */
+>>>>>>> Stashed changes
 
     // ----------- Property checking methods -----------------
     
@@ -375,6 +402,43 @@ public class Neighbours extends Application {
                 {null,                 new Actor(Color.BLUE),                  null},
                 {new Actor(Color.RED),          null,         new Actor(Color.BLUE)}
         };
+<<<<<<< Updated upstream
+=======
+        /* 
+0,0 = 4, ska va 2
+0,1 = 6, ska va 2
+0, 2 = 4, ska va 2
+
+1, 0 = 4, ska va 4 !!
+1, 1 = exception, ska vara 4
+1, 2 = 6 ska va 3
+
+2, 0 = 4, 
+2, 1 = 6,
+2,2 = 4
+
+(2,0) = 1
+(0,2) = 2
+(1,2) = 3
+(2,1) = 3
+(2, 2) = 1
+        */
+        out.println((findNeighbours(testWorld, 2, 2)));
+
+        //out.println(findNeighbours(testWorld, 1, 0));
+
+        //out.println(findNeighbours(testWorld, 2, 1));
+        //out.println(findNeighbours(testWorld, 0, 1));
+
+        /*
+        out.println(findNeighbours(testWorld, 2, 2));
+        
+        out.println(findNeighbours(testWorld, 2, 0));
+
+        out.println(findNeighbours(testWorld, 1, 2));
+        out.println(findNeighbours(testWorld, 1, 1));
+        out.println(findNeighbours(testWorld, 1, 0));
+>>>>>>> Stashed changes
 
 
         //out.println(isSatisfied((findNeighbours(testWorld, 2, 0)), testWorld[2][0], th));
