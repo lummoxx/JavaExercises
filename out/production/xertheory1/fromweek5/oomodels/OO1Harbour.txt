@@ -1,0 +1,14 @@
+OO model for a Harbour
+
+1.  Create class for at ship. Ship has id, length and depth.
+    We assume any setter/getter/equals or hasCode methods are there, don't
+    need to implement)
+
+2.  Create class for a QuayPlace A "place" where a ship can tie up.
+    QuayPlace has length, depth, possible a ship and an id. All data
+    except ship set when QuayPlace created.
+
+3.  Create class Quay. Quay has many QuayPlaces. Add method to tie
+    a ship to the some QuayPlace. If success return true else false.
+
+4.  Create class Harbour. Has many Quays.
