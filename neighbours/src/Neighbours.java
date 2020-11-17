@@ -53,7 +53,8 @@ public class Neighbours extends Application {
         int numNulls = 0;
         int numUnsatis = 0;
         double th = 0.7; // % of surrounding neighbours that are like me
-
+        
+            
         for(int i = 0; i < dim; i++){
             for(int j = 0; j < dim; j++){
                 if(world[i][j]==null){
@@ -71,13 +72,52 @@ public class Neighbours extends Application {
             }
         }
 
-        nulls = shuffleIndices(nulls);  // tomma platser ++ platser med onöjda
+        int anyNulls = 0;
+
+        for (int i = 0; i < numUnsatis; i++){
+            int x = unsatisfied[i][0];
+            int y = unsatisfied[i][1];
+            if (world[x][y] == null) {
+                anyNulls++;
+            }
+        }
+        out.println("This many incorrectly placed null coordinates: " + anyNulls);
+
+
+
+        //Array nulls now contains both positions that are truly nulls and those positions which can become nulls
+        nulls = shuffleIndices(nulls);
         
         for (int i = 0; i < nLocations; i++) {
-           // ...to be continued
+            int[] coordinates = nulls[i]; // split coordinates into lists
+            int r = coordinates[0]; // rows from null 
+            int c = coordinates[1]; // columns from null
+            int r2 = unsatisfied[i][0]; // rows from unsatisfied
+            int c2 = unsatisfied[i][1]; // columns from unsatisfied
+            Actor current = world[r2][c2]; // unsatisfied actor to move
+                
+            if (isMoveOK(world, r, c, th, current.color)) { 
+                if (world[r][c] == null){ // is the position Truly empty?
+                world[r][c] = current;
+                world[r2][c2] = null;
+                } else { 
+                    if (isMoveOK(world, r2, c2, th, world[r][c].color)) {
+                        Actor temp = world[r][c]; // the actor occupying the other position // Cannot resolve symbol 'temp'
+                        world[r][c] = current; // the other position is taken by current
+                        world[r2][c2] = temp;  // position of current is taken by other actor
+                    } 
+                }
+            }
         }
-
     }
+            
+    /*
+            Exception in thread "JavaFX Application Thread" java.lang.NullPointerException
+    */
+        
+    //  boolean isSatisfied(Actor[] neighbours, Actor current, double th){
+    // Actor[] findNeighbours (Actor [][] w, int r, int c){
+        
     // This method initializes the world variable with a random distribution of Actors
     // Method automatically called by JavaFX runtime
     // That's why we must have "@Override" and "public" (just accept for now)
@@ -118,10 +158,10 @@ public class Neighbours extends Application {
         }
         return locations;
     }
-    
+
     Actor[] findNeighbours (Actor [][] w, int r, int c){
         int[] rowIndices = {r, r-1, r+1};   
-        int[] colIndices = {c, c-1, c+1};   
+        int[] colIndices = {c, c-1, c+1};  
         Actor[] neighbours = new Actor[8]; 
         int sumfoundNeigh = 0;
 
@@ -129,22 +169,43 @@ public class Neighbours extends Application {
             for (int j = 0; j <= 2; j++) {
                 if(isValidLocation(w.length, rowIndices[i], colIndices[j]) ) { 
                     if ((w[rowIndices[i]][colIndices[j]] == null) || (i == 0 && j == 0)){
-                        out.println(w[rowIndices[i]][colIndices[j]]);
                         continue;
                     } else {
                         neighbours[sumfoundNeigh] = w[rowIndices[i]][colIndices[j]];
                         sumfoundNeigh++;
-                        out.println(sumfoundNeigh);
                       }
                 }
             }
         } 
-        out.println("sum neighbour " + sumfoundNeigh);
         Actor[] neighbours2 = new Actor[sumfoundNeigh];
         for (int i = 0; i < sumfoundNeigh; i++) {
             neighbours2[i] = neighbours[i];
         } 
-        out.println("antalet grannar: " + neighbours2.length);
+        return neighbours2;
+    }
+
+    int[][] findNeighboursCoordinates (Actor [][] w, int r, int c){
+        int[] rowIndices = {r, r-1, r+1};   
+        int[] colIndices = {c, c-1, c+1};  
+        int[][] neighbours = new int[8][2]; 
+        int sumfoundNeigh = 0;
+
+        for (int i = 0; i <= 2; i++) {
+            for (int j = 0; j <= 2; j++) {
+                if(isValidLocation(w.length, rowIndices[i], colIndices[j]) ) { 
+                    if ((w[rowIndices[i]][colIndices[j]] == null) || (i == 0 && j == 0)){
+                        continue;
+                    } else {
+                        neighbours[sumfoundNeigh] = new int[]{rowIndices[i], colIndices[j]};
+                        sumfoundNeigh++;
+                      }
+                }
+            }
+        } 
+        int[][] neighbours2 = new int[sumfoundNeigh][2];
+        for (int i = 0; i < sumfoundNeigh; i++) {
+            neighbours2[i] = neighbours[i];
+        } 
         return neighbours2;
     }
 
@@ -199,15 +260,44 @@ public class Neighbours extends Application {
         return ((sumRed == numRed) && (sumBlue == numBlue));
     }
 
+
+// Double-checks news positions neighbouring status
+    boolean isMoveOK(Actor[][] world, int r, int c, double th, Color color) {
+        int[][] coordinates = findNeighboursCoordinates(world, r, c);
+        Actor[] neighbours = findNeighbours(world, r, c);
+        for (int i=0; i < coordinates.length; i++) {
+            int x = coordinates[i][0];
+            int y = coordinates[i][1];
+            neighbours[i] = world[x][y];
+        }
+        //findNeighbours(world, r, c); // find the positions neighbours
+        Actor[] satisfiedNeighbours = new Actor[8];//list all satisfied ones
+        int numSatisNeigh = 0;
+        int numSameTeam = 0;
+        
+        for (int i = 0; i < neighbours.length; i++){ 
+            int x = coordinates[i][0];
+            int y = coordinates[i][1];
+            if (isSatisfied(findNeighbours(world, x, y), neighbours[i], th)) { // 105 fel 
+                numSatisNeigh++;
+                if (neighbours[i].color == color){
+                    numSameTeam++;
+                }
+            }
+        }
+        if (numSatisNeigh == numSameTeam) {
+            return true;
+        }
+        return false;
+    }
+
     boolean prop_matrix(double[] dist, Actor[][] world){
         int dim = world.length;
         int sumRed = 0;
         int sumBlue = 0;
         int total = dim*dim;
-        //int sumNull = 0;
         int numRed = (int) Math.round(dist[0] * total);
         int numBlue = (int) Math.round(dist[1] * total);
-        //int numNull = (int) Math.round(dist[2] * total);
         for (int i = 0; i < dim; i++) {
             for (int j = 0; j < dim; j++) {
                 if (world[i][j] == null) {
@@ -286,28 +376,8 @@ public class Neighbours extends Application {
                 {new Actor(Color.RED),          null,         new Actor(Color.BLUE)}
         };
 
-        //out.println((findNeighbours(testWorld, 0, 0)));
-        //out.println(findNeighbours(testWorld, 1, 0));
 
-        //out.println(findNeighbours(testWorld, 2, 1));
-        //out.println(findNeighbours(testWorld, 0, 1));
-
-        /*
-        out.println(findNeighbours(testWorld, 2, 2));
-        
-        out.println(findNeighbours(testWorld, 2, 0));
-
-        out.println(findNeighbours(testWorld, 1, 2));
-        out.println(findNeighbours(testWorld, 1, 1));
-        out.println(findNeighbours(testWorld, 1, 0));
-
-        out.println(findNeighbours(testWorld, 0, 2));
-        out.println(findNeighbours(testWorld, 0, 1));
-        out.println((findNeighbours(testWorld, 0, 0)));
-        */
-        
-
-        out.println(isSatisfied((findNeighbours(testWorld, 2, 0)), testWorld[2][0], th));
+        //out.println(isSatisfied((findNeighbours(testWorld, 2, 0)), testWorld[2][0], th));
       // Simple threshold used for testing
         //out.println(prop_distribute(dist,(distribute(dist, nLocations))));
         //out.println(prop_matrix(dist,toWorld((distribute(dist, nLocations)))));
